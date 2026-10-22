@@ -1,0 +1,127 @@
+/* Mine OS — Focused task manager skin */
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-soft: #f1f3f5;
+  --surface-raised: #ffffff;
+  --text: #25282d;
+  --muted: #8a9099;
+  --line: #e7e9ed;
+  --line-strong: #d4d8de;
+  --primary: #e26643;
+  --primary-soft: #fff0eb;
+  --primary-strong: #c94d2e;
+  --ink: #ffffff;
+  --ink-soft: #f7f8fa;
+  --sidebar-text: #3b4048;
+  --sidebar-muted: #8b929c;
+  --shadow: 0 12px 30px rgba(33, 38, 45, .06);
+  --shadow-small: 0 2px 10px rgba(33, 38, 45, .05);
+  --radius: 10px;
+  --radius-small: 7px;
+}
+:root[data-theme='dark'] {
+  --bg: #191b1f;
+  --surface: #23262b;
+  --surface-soft: #2b2e34;
+  --surface-raised: #30343a;
+  --text: #f0f1f3;
+  --muted: #9da3ad;
+  --line: #363a42;
+  --line-strong: #4a505a;
+  --primary: #ef805b;
+  --primary-soft: #3e2924;
+  --primary-strong: #ff9a79;
+  --sidebar-text: #eef0f2;
+  --sidebar-muted: #9da3ad;
+  --shadow: 0 12px 30px rgba(0, 0, 0, .2);
+  --shadow-small: 0 2px 10px rgba(0, 0, 0, .16);
+}
+.app-shell { background: var(--bg); }
+.sidebar { width: 236px; flex-basis: 236px; padding: 18px 12px; background: var(--surface); color: var(--sidebar-text); border-left: 1px solid var(--line); box-shadow: 1px 0 0 rgba(0,0,0,.01); }
+.brand { padding: 4px 10px 22px; gap: 10px; }
+.brand-mark { width: 31px; height: 31px; border-radius: 9px; font-size: 23px; box-shadow: none; }
+.brand strong { font-size: 16px; }
+.brand span { font-size: 10px; }
+.rail-label { padding: 0 11px 6px; color: var(--sidebar-muted); font-size: 10px; }
+.primary-nav { gap: 1px; }
+.nav-button { color: var(--sidebar-muted); padding: 9px 11px; border-radius: 7px; font-size: 12px; }
+.nav-button:hover { color: var(--text); background: var(--surface-soft); }
+.nav-button.active { background: var(--primary-soft); color: var(--primary-strong); box-shadow: none; }
+.nav-button.active svg { stroke-width: 2.5; }
+.privacy-note { border-top: 1px solid var(--line); color: var(--muted); padding: 14px 8px 0; font-size: 10px; }
+.topbar { height: 58px; padding: 0 30px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.breadcrumbs { font-size: 11px; }
+.top-actions { gap: 5px; }
+.icon-button { width: 32px; height: 32px; border-radius: 7px; }
+.capture-button { border-radius: 7px; padding: 8px 12px; font-size: 11px; box-shadow: none; }
+.content { max-width: 1140px; padding: 32px 34px 72px; }
+.page-intro { margin-bottom: 20px; align-items: center; }
+.page-intro h1, .home-heading h1 { font-size: 30px; letter-spacing: -.055em; }
+.page-intro p:not(.eyebrow), .home-heading p { margin-top: 7px; font-size: 12px; line-height: 1.7; }
+.eyebrow { font-size: 10px; margin-bottom: 7px; }
+.surface { border-radius: 9px; box-shadow: var(--shadow-small); }
+.home-heading { margin-bottom: 20px; }
+.done-counter { min-width: 100px; padding: 10px 13px; border-right: 2px solid var(--primary); }
+.done-counter strong { font-size: 27px; }
+.done-counter span { font-size: 10px; margin-top: 4px; }
+.home-layout { grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr); gap: 20px; }
+.capture-card { min-height: 250px; padding: 22px; border-radius: 10px; background: var(--primary); box-shadow: var(--shadow); }
+.capture-card::after { display: none; }
+.capture-kicker { margin-bottom: 17px; font-size: 10px; }
+.capture-card h2 { font-size: 22px; max-width: 350px; }
+.capture-card p { font-size: 11px; margin: 9px 0 14px; }
+.capture-card textarea { min-height: 50px; }
+.capture-footer { margin-top: 12px; font-size: 9px; }
+.quick-actions { margin-top: 10px; padding-top: 9px; }
+.quick-actions button { font-size: 9px; padding: 6px 8px; }
+.focus-block { padding: 0; }
+.section-label { margin-bottom: 9px; }
+.section-label h2 { font-size: 14px; }
+.section-label span { font-size: 10px; }
+.task-list { gap: 2px; }
+.task-row { padding: 11px 10px; border-radius: 6px; box-shadow: none; }
+.task-row:hover { transform: none; box-shadow: var(--shadow-small); }
+.task-main strong { font-size: 12px; }
+.task-meta { margin-top: 4px; font-size: 9px; }
+.check-button svg { width: 17px; height: 17px; }
+.home-columns { gap: 16px; margin-top: 17px; }
+.surface-block, .surface { padding: 17px; }
+.project-peek, .assistant-peek { min-height: 66px; }
+.project-peek h3, .assistant-peek h3 { font-size: 14px; }
+.project-peek p, .assistant-peek p { font-size: 10px; margin-top: 4px; }
+.symbol { width: 34px; height: 34px; flex-basis: 34px; border-radius: 8px; }
+.inbox-preview { margin-top: 20px; }
+.quiet-row { padding: 10px 0; font-size: 11px; }
+.empty-state { padding: 28px 16px; border-radius: 8px; }
+.empty-state h3 { font-size: 14px; }
+.empty-state p { font-size: 11px; }
+.quick-form { padding: 9px; margin-bottom: 14px; box-shadow: none; background: var(--surface); }
+.quick-form input, .quick-form select, .project-form input, .assistant-card input, .assistant-card textarea { border-radius: 6px; padding: 9px 10px; font-size: 12px; }
+.filter-bar { padding: 11px 13px; margin-bottom: 14px; }
+.filter-controls { gap: 5px; }
+.filter-controls select { min-width: 120px; padding: 8px; font-size: 10px; border-radius: 6px; }
+.table-surface { margin-top: 14px; }
+.table-surface > .task-row, .table-surface > .person-row, .table-surface > .commitment-row { padding: 11px 3px; }
+.cards-list, .notes-grid, .project-grid { gap: 10px; }
+.inbox-card, .note-card, .project-card { padding: 15px; }
+.project-card h3 { font-size: 15px; }
+.stats-grid { gap: 8px; }
+.stat-card { padding: 15px; border-radius: 8px; }
+.stat-card strong { font-size: 26px; }
+.assistant-card { border-top: 2px solid var(--primary); padding: 24px; }
+.button { border-radius: 7px; padding: 9px 12px; font-size: 11px; }
+.button.small { padding: 6px 8px; font-size: 10px; }
+.modal { border-radius: 11px; padding: 18px; }
+.toast { border-radius: 7px; font-size: 11px; }
+@media (max-width: 720px) {
+  .sidebar { width: min(280px, 86vw); }
+  .topbar { padding: 0 14px; }
+  .content { padding: 24px 13px 96px; }
+  .page-intro h1, .home-heading h1 { font-size: 27px; }
+  .home-layout { grid-template-columns: minmax(0, 1fr); gap: 15px; }
+  .capture-card { width: 100%; min-width: 0; min-height: 230px; }
+  .home-heading { margin-bottom: 20px; }
+  .home-columns { gap: 12px; }
+  .surface { padding: 14px; }
+}
